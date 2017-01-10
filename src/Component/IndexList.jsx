@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import action from '../Action/Index';
 import { Tool, merged } from '../Tool';
 import { DataLoad, Footer, UserHeadImg, TabIcon, GetNextPage } from './common/index';
+import Input from 'rctui/Input';
 
 
 /**
@@ -18,6 +19,7 @@ class Nav extends Component {
         setCur[this.props.tab] = 'on';
         return (
             <nav className="index-nav">
+                <Input type="text" placeholder="please enter something"></Input>
                 <ul data-flex="box:mean">
                     <li className={setCur.all}>
                         <Link to="/" activeClassName="active">全部</Link>

@@ -43,6 +43,9 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /^node_modules$/,
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer-loader')
+            }, { 
+                test: /\.scss$/, 
+                loaders: ['style-loader', 'css-loader?modules&localIdentName=[local]-[hash:base64:5]', 'postcss-loader', 'sass-loader'] 
             }, {
                 test: /\.less/,
                 exclude: /^node_modules$/,
